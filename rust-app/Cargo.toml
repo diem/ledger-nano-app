@@ -1,0 +1,23 @@
+[package]
+name = "trove-wallet"
+version = "0.2.0"
+authors = ["yhql"]
+edition = "2018"
+
+[dependencies]
+nanos_sdk = { path = "../ledger-nanos-sdk" }
+nanos_ui = { path = "../ledger-nanos-ui" }
+heapless = "0.7.8"
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+opt-level = 'z'
+lto = true
+
+[package.metadata.nanos]
+curve = "ed25519"
+flags = "0"
+icon = "crab.gif"

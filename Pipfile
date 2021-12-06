@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+ledgerblue = "*"
+pytest = "*"
+click = "*"
+ledgerwallet = {git = "https://github.com/LedgerHQ/ledgerctl.git", editable = true}
+construct = "==2.10.61"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
